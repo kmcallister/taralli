@@ -32,14 +32,25 @@ void map(int *x, int *y);
 ~~~~
 
 which receives pointers to the current mouse coordinates, and is allowed to
-modify those coordinates.  Another function
+modify those coordinates.  A macro `WRAP(var, from, to)` is available; it
+expands to (roughly)
+
+~~~~ {.c}
+if (*var == from) {
+    *var = to;
+    return;
+}
+~~~~
+
+Another function
 
 ~~~~ {.c}
 void map_init(Display *dpy);
 ~~~~
 
-will run at program start.  You can build and run the customized program
-with e.g.
+will run at program start.
+
+You can build and run the customized program with e.g.
 
 ~~~~
 $ ./build.sh beef
