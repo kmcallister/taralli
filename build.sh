@@ -9,4 +9,4 @@ fi
 
 set -xe
 
-gcc -O2 -Wall -std=c99 -pedantic -o taralli_$1 main.c map_$1.c -lX11 -lXi
+cc -O2 -Wall -std=c99 -pedantic -o taralli_$1 main.c map_$1.c -lX11 -lXi
