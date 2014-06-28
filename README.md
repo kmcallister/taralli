@@ -14,10 +14,11 @@ For the common case of a rectangular desktop, you can build and run `taralli`
 like so:
 
 ~~~~
-$ ./build.sh rectangular
-$ ./taralli_rectangular
+$ ./configure
+$ make
+$ sudo make install
+$ taralli
 ~~~~
-
 
 ## Customization
 
@@ -53,10 +54,10 @@ will run at program start.
 You can build and run the customized program with e.g.
 
 ~~~~
-$ ./build.sh beef
-$ ./taralli_beef
+$ ./configure --enable-custom-map=beef
+$ make
+$ ./taralli
 ~~~~
-
 
 ## License
 
