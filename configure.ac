@@ -15,7 +15,7 @@ AC_CHECK_LIB([X11],[XOpenDisplay],[],[
          echo "X11 library is required for this program"
          exit -1])
 AC_CHECK_LIB([Xi],[XGrabDevice],[],[
-         echo "XInput devel library is missing. XInput is required for this program"
+         echo "XInput is required for this program"
          exit -1])
 
 # Checks for header files.
@@ -55,6 +55,7 @@ echo "=================================="
 
 # Pass map_type
 AC_SUBST([map_type], [$map_type])
+
 # Makefile.am workaround (Lazyness)
 mkdir .deps
 touch .deps/map_$map_type.Po
