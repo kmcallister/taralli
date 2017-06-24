@@ -18,6 +18,9 @@ $ ./build.sh rectangular
 $ ./taralli_rectangular
 ~~~~
 
+## Build Dependancies
+
+`taralli` requires the development headers for the X11 Input extension library to be present to successfully build. On Debian or Ubuntu, these are packaged with libxi-dev.
 
 ## Customization
 
